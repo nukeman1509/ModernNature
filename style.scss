@@ -9,6 +9,7 @@
 
 
 /* basic elements */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 //Variables
 //colors
@@ -29,7 +30,7 @@ html {
 }
 
 body {
-	font: 75% georgia, sans-serif;
+	font: 75% Arial, Helvetica, sans-serif; 
 	line-height: 1.88889;
 	margin: 0;
 	padding: 0;
@@ -41,7 +42,7 @@ p {
 }
 
 h3 {
-	font: italic normal 1.4em georgia, sans-serif;
+	font: 1.4em 'Lora', serif;
 	letter-spacing: 1px;
 	margin-bottom: 0;
 	color: #7D775C;
@@ -83,6 +84,7 @@ abbr {
 }
 
 header h1 {
+	font-family:'Lora', serif;
 	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
 	margin-top: 10px;
 	display: block;
@@ -95,6 +97,7 @@ header h1 {
 }
 
 header h2 {
+	font-family:'Lora', serif;
 	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
 	margin-top: 58px;
 	margin-bottom: 40px;
@@ -119,7 +122,7 @@ header {
 }
 
 	.summary p {
-		font: italic 1.1em/2.2 georgia;
+		font-family: Arial, Helvetica, sans-serif;
 		text-align: center;
 	}
 
