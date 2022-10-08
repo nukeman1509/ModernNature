@@ -12,20 +12,17 @@
 
 //Variables
 //colors
-$body-background-color:#000000;
-$primary-color: #c3c3c3;
-$accent1-color: #ffffff;
-$accent2-color: #3f48cc;
-$accent3-color: #48925D;
-$accent4-color: #ff7f27
-//media
-//set breakpoint sizes
-$break-small 20em;
-$break-medium: 31em;
-$break-large: 60em;
+//$body-background-color:#000000;
+//$primary-color: #c3c3c3;
+//$accent1-color: #ffffff;
+//$accent2-color: #3f48cc;
+//$accent3-color: #48925D;
+//$accent4-color: #ff7f27
+
 
 body {
-	background-color: $body-background-color;
+	background-image: url("./Bryce_Grayscale.jpg");
+	background-color:#000000;
 }
 html {
 	margin: 0;
