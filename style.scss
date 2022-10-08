@@ -18,10 +18,6 @@ $background-color:#000000;
 //$accent2-color: #3f48cc;
 //$accent3-color: #48925D;
 //$accent4-color: #ff7f27
-//media breaks
-$break-small: 20em;
-$break-medium: 31em;
-$break-large: 60em;
 
 
 body {
@@ -131,7 +127,6 @@ header {
 	clear: right;
 	padding: 0px 10px 0 10px;
 	background-image: url("./Bryce_Grayscale.jpg");
-	background-color: $accent4-color;
 }
 
 .supporting {
@@ -225,19 +220,3 @@ footer {
 	height: 110px;
 }
 
-@mixin breakpoint($break) {
-    @if $break == large {
-    @media (max-width: $break-large) { @content; }
-    }
-    @else if $break == medium {
-    @media (max-width: $break-medium) { @content; }
-    }
-    @else if $break == small {
-    @media (max-width: $break-small) {
-        max-width: 100%;
-        input, label {display:block;}
-           @content; }
-    } @else {
-    @media ($break) { @content; }
-    }
-    }                
