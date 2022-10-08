@@ -9,15 +9,17 @@
 
 
 /* basic elements */
+
+body {
+	background-image: url("./Bryce_Grayscale.jpg");
+	background-color: #000000;
+}
 html {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-
-	background-image: url("./Bryce_Grayscale.jpg");
-	background-color: #000000;
 	font: 75% georgia, sans-serif;
 	line-height: 1.88889;
 	margin: 0;
