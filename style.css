@@ -7,23 +7,22 @@
 /* basic elements */
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 body {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
   background-color: #000000;
-  font: 75% Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   line-height: 1.88889;
   margin: 0;
   padding: 0;
 }
 
-p {
-  margin-top: 0;
-  text-align: justify;
-}
-
 h3 {
-  font: 1.4em "Lora", serif;
+  font: 1.5em "Lora", serif;
   letter-spacing: 1px;
   margin-bottom: 0;
-  color: #7D775C;
+  color: #000000;
 }
 
 a:link {
@@ -44,74 +43,110 @@ a:hover, a:focus, a:active {
 }
 
 abbr {
+  margin: 0 5px;
   border-bottom: none;
 }
 
 /* specific divs */
 .page-wrapper {
-  background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;
-  padding: 0 175px 0 110px;
-  margin: 0;
+  width: 75px;
+  height: 150px;
+  background: #c3c3c3;
+  margin: 40px 10px;
   position: relative;
 }
 
 .intro {
-  min-width: 470px;
-  width: 100%;
+  width: 1200px;
 }
 
 header h1 {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
   font-family: "Lora", serif;
-  background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-  margin-top: 10px;
-  display: block;
-  width: 219px;
-  height: 87px;
-  float: left;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  margin: 1rem 10rem;
+  padding: 1rem;
+  color: #ffffff;
 }
-
 header h2 {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
   font-family: "Lora", serif;
-  background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
-  margin-top: 58px;
-  margin-bottom: 40px;
-  width: 200px;
-  height: 18px;
-  float: right;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-header {
-  padding-top: 20px;
-  height: 87px;
+  margin: 1rem 10rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #ffffff;
 }
 
 .summary {
-  clear: both;
+  width: 1200px;
   margin: 20px 20px 20px 10px;
-  width: 160px;
-  float: left;
+  color: #ffffff;
 }
-
 .summary p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 .preamble {
-  clear: right;
-  padding: 0px 10px 0 10px;
-  background-image: url("./Bryce_Grayscale.jpg");
+  margin: 20px 20px 20px 10px;
+  color: #ffffff;
+  background-color: #ff7f27;
+}
+.preamble p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
 }
 
-.supporting {
-  padding-left: 10px;
-  margin-bottom: 40px;
+.participation {
+  width: 1200px;
+  margin: 20px 20px 20px 10px;
+  color: #ffffff;
+  background-color: #3f48cc;
+}
+.participation p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 600px;
+}
+
+.explanation {
+  width: 1200px;
+  margin: 20px 20px 20px 10px;
+  border: 5px #000000;
+  color: #ffffff;
+  background-color: #48925D;
+}
+.explanation p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 600px;
+}
+
+.benefits {
+  width: 1200px;
+  margin: 20px 20px 20px 10px;
+  color: #ffffff;
+  background-color: #48925D;
+}
+.benefits p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 600px;
+}
+
+.requirements {
+  width: 1200px;
+  margin: 20px 20px 20px 10px;
+  color: #ffffff;
+  background-color: #48925D;
+}
+.requirements p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 600px;
 }
 
 footer {
@@ -123,22 +158,22 @@ footer a:link, footer a:visited {
 }
 
 .sidebar {
-  margin-left: 600px;
+  margin-left: 1200px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
 }
 
 .sidebar .wrapper {
-  font: 10px verdana, sans-serif;
-  background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+  font: 10px Arial, Helvetica, sans-serif;
+  background: transparent url(http://csszengarden.com/001/paper-bg.jpg);
   padding: 10px;
   margin-top: 150px;
   width: 130px;
 }
 
 .sidebar h3.select {
-  background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
+  background: transparent url(http://csszengarden.com/001/h3.gif);
   margin: 10px 0 5px 0;
   width: 97px;
   height: 16px;
@@ -148,7 +183,7 @@ footer a:link, footer a:visited {
 }
 
 .sidebar h3.archives {
-  background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+  background: transparent url(http://csszengarden.com/001/h5.gif);
   margin: 25px 0 5px 0;
   width: 57px;
   height: 14px;
@@ -158,7 +193,7 @@ footer a:link, footer a:visited {
 }
 
 .sidebar h3.resources {
-  background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+  background: transparent url(http://csszengarden.com/001/h6.gif);
   margin: 25px 0 5px 0;
   width: 63px;
   height: 10px;
@@ -196,6 +231,31 @@ footer a:link, footer a:visited {
   right: 0;
   width: 148px;
   height: 110px;
+}
+
+@media only screen and (min-width: 60em) {
+  body {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+  header h2 {
+    font-size: 2rem;
+  }
+  .preamble {
+    width: 1200px;
+    background-image: url("./Bryce_Grayscale.jpg");
+  }
+  .preamble p {
+    width: 600px;
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
