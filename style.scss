@@ -25,15 +25,12 @@ $font-headings:'Lora', serif;
 $font-body: Arial, Helvetica, sans-serif;
 
 body {
-display: grid;
-grid-template-columns: 1fr;
 width: 100%;
 background-color: $background-color;
 font-family: $font-body;
 font-size: 16px;
-	line-height: 1.88889;
-	margin: 0;
-	padding: 0;
+margin: 0;
+padding: 0;
 }
 @mixin headings() {
 	display: flex;
@@ -45,6 +42,8 @@ font-size: 16px;
   }
 
 @mixin class() {
+	display: grid;
+    grid-template-columns: 1fr;
 	width: 1200px;
 	margin: 20px 20px 20px 10px;
 	padding: 0 2rem;	
@@ -274,10 +273,17 @@ footer {
    }
 
    .preamble {
+	background-color: $accent3-color;
+	background-size: 50% auto;
+	width: 100%;
+	float: right;
+   }
+
+   .preamble {
     background-image: url("./Bryce_Grayscale.jpg");
 	background-size: 50% auto;
     width: 100%;
-	float:left;	
+	float:left;
 }
  
 nav ul {

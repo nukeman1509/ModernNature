@@ -7,13 +7,10 @@
 /* basic elements */
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 body {
-  display: grid;
-  grid-template-columns: 1fr;
   width: 100%;
   background-color: #000000;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.88889;
   margin: 0;
   padding: 0;
 }
@@ -88,6 +85,8 @@ header h3 {
 }
 
 .summary {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -102,6 +101,8 @@ header h3 {
 }
 
 .preamble {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -115,6 +116,8 @@ header h3 {
 }
 
 .participation {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -128,6 +131,8 @@ header h3 {
 }
 
 .explanation {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -141,6 +146,8 @@ header h3 {
 }
 
 .benefits {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -154,6 +161,8 @@ header h3 {
 }
 
 .requirements {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -264,6 +273,12 @@ footer a:link, footer a:visited {
   }
   p {
     width: 600px;
+  }
+  .preamble {
+    background-color: #48925D;
+    background-size: 50% auto;
+    width: 100%;
+    float: right;
   }
   .preamble {
     background-image: url("./Bryce_Grayscale.jpg");
