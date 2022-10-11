@@ -44,11 +44,17 @@ font-size: 16px;
 	padding: 1rem;
   }
 
-h3 {
-	font: 1.5em $font-headings;
-	letter-spacing: 1px;
-	margin-bottom: 0;
+@mixin class() {
+	width: 1200px;
+	margin: 20px 20px 20px 10px;
+	padding: 0 2rem;	
+}
+
+@mixin paragraph() {
+	font-family: $font-body;
+	text-align: left;
 	color: $background-color;
+	padding: 0 2rem;		
 }
 
  a:link {
@@ -75,9 +81,11 @@ abbr {
 
 /* specific divs */
 .page-wrapper {
-	width: 75px;
-	height: 150px;
+	width: 100px;
+	height: 250px;
 	background: $primary-color;
+	border: 1rem solid;
+	border-color: $accent4-color;
 	margin: 40px 10px;
 	position: relative;
 }
@@ -90,85 +98,75 @@ header {
 	 h1 {
 @include headings;
 color: $accent1-color;
+border: solid 1rem;
+border-color: $accent4-color;
 }
 
      h2 {
 @include headings;
-font-size: 2rem;
-color: $accent1-color;	
+color: $accent1-color;
+border: solid 1rem;
+border-color: $accent4-color;	
 }
+     h3 {
+@include headings;
+color: $background-color;
+	 }
 }
 
 .summary {
-	width: 1200px;
-	margin: 20px 20px 20px 10px;
+	@include class;
 	color: $accent1-color;
 	p {
 		font-family: $font-body;
 		text-align: center;
+		padding: 0 15rem;
+		border: solid 1rem;
+        border-color: $accent4-color;
 	}
 }
 
 .preamble {
-	margin: 20px 20px 20px 10px;
-	color: $accent1-color;
-	background-color: $accent4-color;
+    @include class;
+	background-color: $accent3-color;
 	p {
-		font-family: $font-body;
-		text-align: left;
+		@include paragraph;
 	}
 	
 }
 
 .participation {
-	width: 1200px;
-	margin: 20px 20px 20px 10px;
-	color: $accent1-color;	
+	@include class;
 	background-color: $accent2-color;
 	//background-image: url("./Bryce_Grayscale.jpg");
 	p {
-		font-family: $font-body;
-		text-align: left;
-		width:600px
+		@include paragraph;	
 	}
 }
 .explanation {
-	width: 1200px;
-	margin: 20px 20px 20px 10px;
-	border: 5px $background-color;
-	color: $accent1-color;	
-	background-color: $accent3-color;
+	@include class;	
+	background-color: $accent4-color;
 	//background-image: url("./Bryce_Grayscale.jpg");
 	p {
-		font-family: $font-body;
-		text-align: left;
-		width:600px
+		@include paragraph;
 	}
 }
 
 .benefits {
-	width: 1200px;
-	margin: 20px 20px 20px 10px;
-	color: $accent1-color;
-	background-color: $accent3-color;	
+	@include class;
+	background-color: $accent4-color;	
 	//background-image: url("./Bryce_Grayscale.jpg");
 	p {
-		font-family: $font-body;
-		text-align: left;
-		width:600px
+		@include paragraph;
 	}
 }
 
 .requirements {
-	width: 1200px;
-	margin: 20px 20px 20px 10px;
-	color: $accent1-color;	
+	@include class;
 	background-color: $accent3-color;
 	//background-image: url("./Bryce_Grayscale.jpg");
 	p {
-		font-family: $font-body;
-		text-align: left;
-		width:600px
+		@include paragraph;
 	}
 }
 footer {
@@ -247,41 +245,40 @@ footer {
 			color: #B3AE94;
 		}
 
-
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
-	position: absolute;
-	top: 40px;
-	right: 0;
-	width: 148px;
-	height: 110px;
-}
-
-@media only screen and (min-width: 60em) { 
+@media only screen and (min-width: 31em) { 
     body {
         max-width: 1400px;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
     }
 	header {
 		h1 {
+   display: flex;
+   justify-content: center;
+   align-items: center;	
    font-size: 3rem;
    }
    
 		h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;		
    font-size: 2rem;	
    }
+        h3 {
+	font-size: 1.5rem;		
+	}
+   }
+   p {
+	width: 600px
    }
 
    .preamble {
-	width: 1200px;
     background-image: url("./Bryce_Grayscale.jpg");
-	p {
-		width:600px
-	}
-	
+	background-size: 50% auto;
+    width: 100%;
+	float:left;	
 }
-
  
 nav ul {
     display: flex;
