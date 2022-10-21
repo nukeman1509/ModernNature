@@ -12,24 +12,24 @@
 
 //Variables
 //colors
-//$body-background-color:#000000;
-$body-background-color:#343231;
+$body-background-color:#000000;
 $primary-color: #c3c3c3;
 $accent1-color: #ffffff;
 $accent2-color: #3f48cc;
 $accent3-color: #48925D;
-$accent4-color: #ff7f27;
+$accent4-color: #ff7f27
 //media
 //set breakpoint sizes
-$break-small: 20em;
+$break-small 20em;
 $break-medium: 31em;
 $break-large: 60em;
 
-
+body {
+	background-color: $body-background-color;
+}
 html {
 	margin: 0;
 	padding: 0;
-	background-color: $body-background-color;
 }
 
 body {
@@ -75,7 +75,7 @@ abbr {
 
 /* specific divs */
 .page-wrapper {
-	//background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;
+	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;
 	padding: 0 175px 0 110px;
 	margin: 0;
 	position: relative;
@@ -87,7 +87,7 @@ abbr {
 }
 
 header h1 {
-	//background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
+	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
 	margin-top: 10px;
 	display: block;
 	width: 219px;
@@ -99,7 +99,7 @@ header h1 {
 }
 
 header h2 {
-	//background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
+	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
 	margin-top: 58px;
 	margin-bottom: 40px;
 	width: 200px;
@@ -155,14 +155,14 @@ footer {
 
 	.sidebar .wrapper {
 		font: 10px verdana, sans-serif;
-		//background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+		background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
 		padding: 10px;
 		margin-top: 150px;
 		width: 130px;
 	}
 
 	.sidebar h3.select {
-		//background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
+		background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
 		margin: 10px 0 5px 0;
 		width: 97px;
 		height: 16px;
@@ -172,7 +172,7 @@ footer {
 	}
 
 	.sidebar h3.archives {
-		//background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+		background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
 		margin: 25px 0 5px 0;
 		width: 57px;
 		height: 14px;
@@ -182,7 +182,7 @@ footer {
 	}
 
 	.sidebar h3.resources {
-		//background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+		background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
 		margin: 25px 0 5px 0;
 		width: 63px;
 		height: 10px;
@@ -199,7 +199,7 @@ footer {
 
 	.sidebar li {
 		line-height: 1.3em;
-		//background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+		background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
 		display: block;
 		padding-top: 5px;
 		margin-bottom: 5px;
@@ -216,7 +216,7 @@ footer {
 
 
 .extra1 {
-	//background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
+	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
 	position: absolute;
 	top: 40px;
 	right: 0;
