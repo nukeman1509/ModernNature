@@ -191,12 +191,12 @@ footer a:link, footer a:visited {
 }
 
 /*.sidebar .wrapper {
-		font: 10px $font-body;
-		background: transparent url(http://csszengarden.com/001/paper-bg.jpg); //top left repeat-y;
-		padding: 10px;
-		margin-top: 150px;
-		width: 130px;
-	}*/
+	font: 10px $font-body;
+	background: transparent url(http://csszengarden.com/001/paper-bg.jpg); //top left repeat-y;
+	padding: 10px;
+	margin-top: 150px;
+	width: 130px;
+}*/
 .sidebar h3.select {
   background-color: #48925D;
   color: #ffffff;
@@ -277,7 +277,6 @@ footer a:link, footer a:visited {
     background-color: #48925D;
     border: #c3c3c3 solid 1rem;
     background-image: url("./Bryce_Grayscale.jpg");
-    background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
   }
