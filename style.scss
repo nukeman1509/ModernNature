@@ -284,6 +284,7 @@ footer a:link, footer a:visited {
         background-color: $accent3-color;
         border: $primary-color solid 1rem;
         background-image: url("./Bryce_Grayscale.jpg");
+        background-size: contain;
         background-position: right;
         background-repeat: no-repeat;
     }
