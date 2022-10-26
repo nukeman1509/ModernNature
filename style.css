@@ -6,9 +6,37 @@
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 /* basic elements */
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+#zen-intro {
+  grid-area: int;
+}
+
+#zen-supporting {
+  grid-area: sup;
+}
+
+#zen-participation {
+  grid-area: par;
+}
+
+#zen-benefits {
+  grid-area: ben;
+}
+
+#zen-requirements {
+  grid-area: req;
+}
+
+footer {
+  grid-area: ft;
+}
+
+aside {
+  grid-area: as;
+}
+
 body {
   width: 100%;
-  background-color: #000000;
+  background-color: #c3c3c3;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   margin: 0;
@@ -18,18 +46,18 @@ body {
 a:link {
   font-weight: bold;
   text-decoration: none;
-  color: #B7A5DF;
+  color: #000000;
 }
 
 a:visited {
   font-weight: bold;
   text-decoration: none;
-  color: #D4CDDC;
+  color: #ffffff;
 }
 
 a:hover, a:focus, a:active {
   text-decoration: underline;
-  color: #9685BA;
+  color: #c3c3c3;
 }
 
 abbr {
@@ -39,13 +67,15 @@ abbr {
 
 /* specific divs */
 .page-wrapper {
-  width: 100px;
+  /*width: 100px;
   height: 250px;
-  background: #c3c3c3;
+  background: $accent3-color;
   border: 1rem solid;
-  border-color: #ff7f27;
+  border-color: $accent4-color;
   margin: 40px 10px;
-  position: relative;
+  position: relative;*/
+  display: grid;
+  grid-template-areas: "int" "as" "sup" "par" "ben" "req" "ft";
 }
 
 .intro {
@@ -60,8 +90,11 @@ header h1 {
   margin: 1rem 10rem;
   padding: 1rem;
   color: #ffffff;
-  border: solid 1rem;
-  border-color: #ff7f27;
+  border: solid 1px;
+  border-color: #000000;
+  background: #ff7f27;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 header h2 {
   display: flex;
@@ -71,8 +104,11 @@ header h2 {
   margin: 1rem 10rem;
   padding: 1rem;
   color: #ffffff;
-  border: solid 1rem;
-  border-color: #ff7f27;
+  border: solid 1px;
+  border-color: #000000;
+  background: #ff7f27;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 header h3 {
   display: flex;
@@ -85,8 +121,8 @@ header h3 {
 }
 
 .summary {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -95,18 +131,22 @@ header h3 {
 .summary p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  padding: 0 15rem;
-  border: solid 1rem;
-  border-color: #ff7f27;
+  margin: 0 0 1rem 5rem;
+  padding: 0 10rem;
+  border: solid 1px;
+  border-color: #000000;
+  background: #ff7f27;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .preamble {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
-  background-color: #48925D;
+  background-color: #ff7f27;
 }
 .preamble p {
   font-family: Arial, Helvetica, sans-serif;
@@ -116,12 +156,12 @@ header h3 {
 }
 
 .explanation {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
-  background-color: #ff7f27;
+  background-color: #48925D;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   color: #000000;
@@ -129,8 +169,8 @@ header h3 {
 }
 
 .participation {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -144,8 +184,8 @@ header h3 {
 }
 
 .benefits {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -159,8 +199,8 @@ header h3 {
 }
 
 .requirements {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
@@ -185,20 +225,31 @@ footer a:link, footer a:visited {
 }
 
 .sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar li {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  list-style-type: none;
 }
 
-/*.sidebar .wrapper {
-	font: 10px $font-body;
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg); //top left repeat-y;
-	padding: 10px;
-	margin-top: 150px;
-	width: 130px;
-}*/
+.sidebar .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .sidebar h3.select {
-  background-color: #48925D;
+  background-color: #3f48cc;
   color: #ffffff;
   margin: 0 0 25px 0;
   padding: 10px;
@@ -208,7 +259,7 @@ footer a:link, footer a:visited {
 }
 
 .sidebar h3.archives {
-  background-color: #48925D;
+  background-color: #3f48cc;
   color: #ffffff;
   margin: 0 0 25px 0;
   padding: 10px;
@@ -218,7 +269,7 @@ footer a:link, footer a:visited {
 }
 
 .sidebar h3.resources {
-  background-color: #48925D;
+  background-color: #3f48cc;
   color: #ffffff;
   margin: 0 0 25px 0;
   padding: 10px;
@@ -227,26 +278,12 @@ footer a:link, footer a:visited {
   white-space: wrap;
 }
 
-.sidebar ul {
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar li {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 5px;
-  margin-bottom: 5px;
-  list-style-type: none;
-}
-
 .sidebar li a:link {
-  color: #988F5E;
+  color: #ffffff;
 }
 
 .sidebar li a:visited {
-  color: #B3AE94;
+  color: #000000;
 }
 
 @media only screen and (min-width: 31em) {
@@ -275,14 +312,14 @@ footer a:link, footer a:visited {
   }
   .preamble {
     background-color: #48925D;
-    border: #c3c3c3 solid 1rem;
+    border: #000000 solid 1rem;
     background-image: url("./Bryce_Grayscale.jpg");
     background-position: right;
     background-repeat: no-repeat;
   }
   .explanation {
     background-color: #ff7f27;
-    border: #c3c3c3 solid 1rem;
+    border: #000000 solid 1rem;
     background-image: url("./waterfall.jpg");
     background-position: left;
     background-repeat: no-repeat;
@@ -300,14 +337,14 @@ footer a:link, footer a:visited {
   }
   .participation {
     background-color: #3f48cc;
-    border: #c3c3c3 solid 1rem;
+    border: #000000 solid 1rem;
     background-image: url("./ocean.jpg");
     background-position: right;
     background-repeat: no-repeat;
   }
   .benefits {
     background-color: #ff7f27;
-    border: #c3c3c3 solid 1rem;
+    border: #000000 solid 1rem;
     background-image: url("./sunflower.jpg");
     background-position: left;
     background-repeat: no-repeat;
@@ -325,7 +362,7 @@ footer a:link, footer a:visited {
   }
   .requirements {
     background-color: #48925D;
-    border: #c3c3c3 solid 1rem;
+    border: #000000 solid 1rem;
     background-image: url("./great-hunt.jpg");
     background-position: right;
     background-repeat: no-repeat;
@@ -336,12 +373,147 @@ footer a:link, footer a:visited {
     align-content: center;
     color: #ffffff;
   }
+  .sidebar .wrapper {
+    display: block;
+  }
   .sidebar {
-    margin-left: 1400px;
+    position: absolute;
+    top: 0;
+    margin-left: 1350px;
   }
   .sidebar li {
     line-height: 2em;
     display: block;
+  }
+  .sidebar li:nth-child(even) {
+    margin-right: 35%;
+    padding: 1em;
+    background: linear-gradient(0deg, rgb(255, 151, 0) 0%, rgb(251, 75, 2) 100%);
+    line-height: 42px;
+    border: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .sidebar li:nth-child(even):before,
+.sidebar li:nth-child(even):after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgb(251, 75, 2);
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  .sidebar li:nth-child(even):before {
+    height: 0%;
+    width: 2px;
+  }
+  .sidebar li:nth-child(even):after {
+    width: 0%;
+    height: 2px;
+  }
+  .sidebar li:nth-child(even):hover {
+    color: rgb(251, 75, 2);
+    background: transparent;
+  }
+  .sidebar li:nth-child(even):hover:before {
+    height: 100%;
+  }
+  .sidebar li:nth-child(even):hover:after {
+    width: 100%;
+  }
+  .sidebar li:nth-child(even):before,
+.sidebar li:nth-child(even):after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgb(251, 75, 2);
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  .sidebar li:nth-child(even):before {
+    width: 2px;
+    height: 0%;
+  }
+  .sidebar li:nth-child(even):after {
+    height: 2px;
+    width: 0%;
+  }
+  .sidebar li:nth-child(even):hover:before {
+    height: 100%;
+  }
+  .sidebar li:nth-child(even):hover:after {
+    width: 100%;
+  }
+  .sidebar li:nth-child(odd) {
+    margin-left: 35%;
+    padding: 1em;
+    background: #48925D;
+    background: linear-gradient(0deg, #48925D 0%, #3f48cc 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    border: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .sidebar li:nth-child(odd):before,
+.sidebar li:nth-child(odd):after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #48925D;
+    transition: all 0.3s ease;
+  }
+  .sidebar li:nth-child(odd):before {
+    height: 0%;
+    width: 2px;
+  }
+  .sidebar li:nth-child(odd):after {
+    width: 0%;
+    height: 2px;
+  }
+  .sidebar li:nth-child(odd):hover {
+    background: transparent;
+    box-shadow: none;
+  }
+  .sidebar li:nth-child(odd):hover:before {
+    height: 100%;
+  }
+  .sidebar li:nth-child(odd):hover:after {
+    width: 100%;
+  }
+  .sidebar li:nth-child(odd):hover {
+    color: rgb(2, 126, 251);
+  }
+  .sidebar li:nth-child(odd):before,
+.sidebar li:nth-child(odd):after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #48925D;
+    transition: all 0.3s ease;
+  }
+  .sidebar li:nth-child(odd):before {
+    width: 2px;
+    height: 0%;
+  }
+  .sidebar li:nth-child(odd):after {
+    width: 0%;
+    height: 2px;
+  }
+  .sidebar li:nth-child(odd):hover:before {
+    height: 100%;
+  }
+  .sidebar li:nth-child(odd):hover:after {
+    width: 100%;
   }
 }
 

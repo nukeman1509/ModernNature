@@ -24,14 +24,43 @@ $accent4-color: #ff7f27;
 $font-headings:'Lora', serif;
 $font-body: Arial, Helvetica, sans-serif;
 
+#zen-intro {
+	grid-area: int;
+}
+
+#zen-supporting {
+	grid-area: sup;
+}
+
+#zen-participation {
+	grid-area: par;
+}
+
+#zen-benefits {
+	grid-area: ben;
+}
+
+#zen-requirements {
+	grid-area: req;
+}
+
+footer {
+	grid-area: ft;
+}
+
+aside {
+	grid-area: as;
+}
+
 body {
 width: 100%;
-background-color: $background-color;
+background-color: $primary-color;
 font-family: $font-body;
 font-size: 16px;
 margin: 0;
 padding: 0;
 }
+
 @mixin headings() {
 	display: flex;
 	flex-wrap: wrap;
@@ -42,8 +71,8 @@ padding: 0;
   }
 
 @mixin class() {
-	display: grid;
-    grid-template-columns: 1fr;
+	display: flex;
+    flex-direction: column;
 	width: 1200px;
 	margin: 20px 20px 20px 10px;
 	padding: 0 2rem;	
@@ -59,17 +88,17 @@ padding: 0;
  a:link {
 		font-weight: bold;
 		text-decoration: none;
-		color: #B7A5DF;
+		color: $background-color;
 		
 	}
 a:visited {
 		font-weight: bold;
 		text-decoration: none;
-		color: #D4CDDC;
+		color: $accent1-color;
 	}
 a:hover, a:focus, a:active {
 		text-decoration: underline;
-		color: #9685BA;
+		color: $primary-color;
 	}
 
 abbr {
@@ -80,13 +109,22 @@ abbr {
 
 /* specific divs */
 .page-wrapper {
-	width: 100px;
+	/*width: 100px;
 	height: 250px;
-	background: $primary-color;
+	background: $accent3-color;
 	border: 1rem solid;
 	border-color: $accent4-color;
 	margin: 40px 10px;
-	position: relative;
+	position: relative;*/
+display: grid;
+grid-template-areas:
+"int"
+"as"
+"sup"
+"par"
+"ben"
+"req"
+"ft";
 }
 
 .intro {
@@ -97,15 +135,29 @@ header {
 	 h1 {
 @include headings;
 color: $accent1-color;
-border: solid 1rem;
-border-color: $accent4-color;
+border: solid 1px;
+border-color: $background-color;
+background: $accent4-color;
+	box-shadow:
+	 -7px -7px 20px 0px rgba(255,255,255,.9),
+	 -4px -4px 5px 0px rgba(255,255,255,.9),
+	 7px 7px 20px 0px rgba(0,0,0,.2),
+	 4px 4px 5px 0px rgba(0,0,0,.3);
+	transition: all 0.3s ease;
 }
 
      h2 {
 @include headings;
 color: $accent1-color;
-border: solid 1rem;
-border-color: $accent4-color;	
+border: solid 1px;
+border-color: $background-color;
+background: $accent4-color;
+	box-shadow:
+	 -7px -7px 20px 0px rgba(255,255,255,.9),
+	 -4px -4px 5px 0px rgba(255,255,255,.9),
+	 7px 7px 20px 0px rgba(0,0,0,.2),
+	 4px 4px 5px 0px rgba(0,0,0,.3);
+	transition: all 0.3s ease;
 }
      h3 {
 @include headings;
@@ -119,15 +171,23 @@ color: $background-color;
 	p {
 		font-family: $font-body;
 		text-align: center;
-		padding: 0 15rem;
-		border: solid 1rem;
-        border-color: $accent4-color;
+		margin: 0 0 1rem 5rem;
+		padding: 0 10rem;
+		border: solid 1px;
+        border-color: $background-color;
+		background: $accent4-color;
+	box-shadow:
+	 -7px -7px 20px 0px rgba(255,255,255,.9),
+	 -4px -4px 5px 0px rgba(255,255,255,.9),
+	 7px 7px 20px 0px rgba(0,0,0,.2),
+	 4px 4px 5px 0px rgba(0,0,0,.3);
+	transition: all 0.3s ease;
 	}
 }
 
 .preamble {
     @include class;
-	background-color: $accent3-color;
+	background-color: $accent4-color;
 	p {
 		@include paragraph;
 	}
@@ -136,7 +196,7 @@ color: $background-color;
 
 .explanation {
 	@include class;	
-	background-color: $accent4-color;
+	background-color: $accent3-color;
 		@include paragraph;
 	}
 
@@ -173,23 +233,32 @@ footer {
 		padding: 0 2em;
 		background-color: $accent4-color;
 	}
-
 .sidebar {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
+	display: flex;
+	flex-wrap: wrap;
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: flex-start;
+		padding-top: 5px;
+		margin-bottom: 5px;
+		list-style-type: none;
+		}
+	} 
 
-	/*.sidebar .wrapper {
-		font: 10px $font-body;
-		background: transparent url(http://csszengarden.com/001/paper-bg.jpg); //top left repeat-y;
-		padding: 10px;
-		margin-top: 150px;
-		width: 130px;
-	}*/
+	.sidebar .wrapper {
+	    display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
 
 	.sidebar h3.select {
-		background-color: $accent3-color;
+		background-color: $accent2-color;
 		color: $accent1-color;
 		margin: 0 0 25px 0;
 		padding: 10px;
@@ -199,7 +268,7 @@ footer {
 	}
 
 	.sidebar h3.archives {
-		background-color: $accent3-color;
+		background-color: $accent2-color;
 		color: $accent1-color;
 		margin: 0 0 25px 0;
 		padding: 10px;
@@ -209,7 +278,7 @@ footer {
 	}
 
 	.sidebar h3.resources {
-		background-color: $accent3-color;
+		background-color: $accent2-color;
 		color: $accent1-color;
 		margin: 0 0 25px 0;
 		padding: 10px;
@@ -218,27 +287,13 @@ footer {
 		white-space: wrap;
 	}
 
-
-	.sidebar ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	.sidebar li {
-		display: flex;
-        align-items: center;
-        justify-content: space-around;
-		padding-top: 5px;
-		margin-bottom: 5px;
-		list-style-type: none;
-	}
-
+	
 	.sidebar li a:link {
-			color: #988F5E;
+			color: $accent1-color;
 		}
 
 	.sidebar li a:visited {
-			color: #B3AE94;
+			color: $background-color;
 		}
 
 @media only screen and (min-width: 31em) { 
@@ -271,7 +326,7 @@ footer {
 
    .preamble {
 	background-color: $accent3-color;
-	border: $primary-color solid 1rem;
+	border: $background-color solid 1rem;
     background-image: url("./Bryce_Grayscale.jpg");
     background-position: right;
     background-repeat: no-repeat;
@@ -279,7 +334,7 @@ footer {
 
   .explanation  {
 	background-color: $accent4-color;
-	border: $primary-color solid 1rem;
+	border: $background-color solid 1rem;
     background-image: url("./waterfall.jpg");
     background-position: left;
     background-repeat: no-repeat;
@@ -298,7 +353,7 @@ footer {
 
   .participation {
 	background-color: $accent2-color;
-	border: $primary-color solid 1rem;
+	border: $background-color solid 1rem;
     background-image: url("./ocean.jpg");
     background-position: right;
     background-repeat: no-repeat;
@@ -306,7 +361,7 @@ footer {
 
 .benefits {
 	background-color: $accent4-color;
-	border: $primary-color solid 1rem;
+	border: $background-color solid 1rem;
     background-image: url("./sunflower.jpg");
     background-position: left;
     background-repeat: no-repeat;
@@ -325,7 +380,7 @@ footer {
 
 .requirements {
 	background-color: $accent3-color;
-	border: $primary-color solid 1rem;
+	border: $background-color solid 1rem;
     background-image: url("./great-hunt.jpg");
     background-position: right;
     background-repeat: no-repeat;
@@ -339,15 +394,160 @@ footer {
 
 }
 
+.sidebar .wrapper {
+	    display: block;
+	}
+
 .sidebar {
-	margin-left: 1400px;
-	
+	position: absolute;
+	top: 0;
+	margin-left: 1350px;
+	li {
+		line-height: 2em;
+		display: block;
+	}
 }
 
-.sidebar li {
-	line-height: 2em;
+ 
+.sidebar li:nth-child(even) {
+	margin-right:35%;
+	padding: 1em;
+    background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+	line-height: 42px;
+	border: none;
+	position: relative;
 	display: block;
-}
+	width: 100%;
+	height: 100%;
+  }
+  .sidebar li:nth-child(even):before,
+  .sidebar li:nth-child(even):after {
+	position: absolute;
+	content: "";
+	right: 0;
+	bottom: 0;
+	background: rgba(251,75,2,1);
+	box-shadow:
+	 -7px -7px 20px 0px rgba(255,255,255,.9),
+	 -4px -4px 5px 0px rgba(255,255,255,.9),
+	 7px 7px 20px 0px rgba(0,0,0,.2),
+	 4px 4px 5px 0px rgba(0,0,0,.3);
+	transition: all 0.3s ease;
+  }
+  .sidebar li:nth-child(even):before{
+	 height: 0%;
+	 width: 2px;
+  }
+  .sidebar li:nth-child(even):after {
+	width: 0%;
+	height: 2px;
+  }
+  .sidebar li:nth-child(even):hover{
+	color: rgba(251,75,2,1);
+	background: transparent;
+  }
+  .sidebar li:nth-child(even):hover:before {
+	height: 100%;
+  }
+  .sidebar li:nth-child(even):hover:after {
+	width: 100%;
+  }
+  .sidebar li:nth-child(even):before,
+  .sidebar li:nth-child(even):after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	background: rgba(251,75,2,1);
+	box-shadow:
+	 -7px -7px 20px 0px rgba(255,255,255,.9),
+	 -4px -4px 5px 0px rgba(255,255,255,.9),
+	 7px 7px 20px 0px rgba(0,0,0,.2),
+	 4px 4px 5px 0px rgba(0,0,0,.3);
+	transition: all 0.3s ease;
+  }
+  .sidebar li:nth-child(even):before {
+	width: 2px;
+	height: 0%;
+  }
+  .sidebar li:nth-child(even):after {
+	height: 2px;
+	width: 0%;
+  }
+  .sidebar li:nth-child(even):hover:before {
+	height: 100%;
+  }
+  .sidebar li:nth-child(even):hover:after {
+	width: 100%;
+  }
+
+.sidebar li:nth-child(odd) {
+	margin-left: 35%;
+	padding: 1em;
+	background: $accent3-color;
+    background: linear-gradient(0deg,$accent3-color 0%, $accent2-color 100%);
+	width: 130px;
+	height: 40px;
+	line-height: 42px;
+	border: none;
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+  }
+  .sidebar li:nth-child(odd):before,
+  .sidebar li:nth-child(odd):after {
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 0;
+	 background: $accent3-color;
+	transition: all 0.3s ease;
+  }
+  .sidebar li:nth-child(odd):before {
+	height: 0%;
+	width: 2px;
+  }
+  .sidebar li:nth-child(odd):after {
+	width: 0%;
+	height: 2px;
+  }
+  .sidebar li:nth-child(odd):hover{
+	 background: transparent;
+	box-shadow: none;
+  }
+  .sidebar li:nth-child(odd):hover:before {
+	height: 100%;
+  }
+  .sidebar li:nth-child(odd):hover:after {
+	width: 100%;
+  }
+  .sidebar li:nth-child(odd):hover{
+	 color: rgba(2,126,251,1);
+  }
+  .sidebar li:nth-child(odd):before,
+  .sidebar li:nth-child(odd):after {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	 background: $accent3-color;
+	transition: all 0.3s ease;
+  }
+  .sidebar li:nth-child(odd):before {
+	width: 2px;
+	height: 0%;
+  }
+  .sidebar li:nth-child(odd):after {
+	width: 0%;
+	height: 2px;
+  }
+  .sidebar li:nth-child(odd):hover:before {
+	height: 100%;
+  }
+  .sidebar li:nth-child(odd):hover:after {
+	width: 100%;
+  }
 
  }
 
