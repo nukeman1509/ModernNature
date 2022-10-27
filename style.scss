@@ -553,4 +553,17 @@ footer {
 
  }
 
+// Here we lay the groundwork for responsive design
+@media only screen and (max-width: 800px) {
+	.preamble {
+		width: 40%;
+		background-image: none;
+	}
+
+
+
+
+
+}
+
 
