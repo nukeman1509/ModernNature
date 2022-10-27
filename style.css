@@ -28,6 +28,7 @@
 
 footer {
   grid-area: ft;
+  padding-bottom: 20px;
 }
 
 aside {
