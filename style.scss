@@ -46,7 +46,6 @@ $font-body: Arial, Helvetica, sans-serif;
 
 footer {
 	grid-area: ft;
-	padding-bottom: 20px;
 }
 
 aside {
@@ -54,12 +53,16 @@ aside {
 }
 
 body {
-width: 100%;
 background-color: $primary-color;
 font-family: $font-body;
 font-size: 16px;
 margin: 0;
 padding: 0;
+}
+
+body {
+	background-image: url("./tree.jpg");
+	background-repeat: no-repeat;
 }
 
 @mixin headings() {
@@ -77,6 +80,15 @@ padding: 0;
 	width: 1200px;
 	margin: 20px 20px 20px 10px;
 	padding: 0 2rem;	
+}
+
+@mixin sidebar-header() {
+	background-color: $accent2-color;
+	color: $accent1-color;
+	margin: 1rem;
+	padding: 10px;
+	width: 200px;
+	height: 16px;
 }
 
 @mixin paragraph() {
@@ -110,13 +122,6 @@ abbr {
 
 /* specific divs */
 .page-wrapper {
-	/*width: 100px;
-	height: 250px;
-	background: $accent3-color;
-	border: 1rem solid;
-	border-color: $accent4-color;
-	margin: 40px 10px;
-	position: relative;*/
 display: grid;
 grid-template-areas:
 "int"
@@ -126,10 +131,6 @@ grid-template-areas:
 "ben"
 "req"
 "ft";
-}
-
-.intro {
-	width: 1200px;
 }
 
 header {
@@ -172,7 +173,7 @@ color: $background-color;
 	p {
 		font-family: $font-body;
 		text-align: center;
-		margin: 0 0 1rem 5rem;
+		margin: 0 0 1rem 6rem;
 		padding: 0 10rem;
 		border: solid 1px;
         border-color: $background-color;
@@ -227,6 +228,7 @@ color: $background-color;
 footer {
 	font-family: $font-headings;
 	text-align: center;
+	margin-bottom: 1rem;
 }
 
 	footer a:link, footer a:visited {
@@ -246,57 +248,46 @@ footer {
 		flex-wrap: wrap;
 		width: 100%;
 		justify-content: flex-start;
-		padding-top: 5px;
+		padding:.5rem;
 		margin-bottom: 5px;
 		list-style-type: none;
-
 		}
 	} 
 
 	.sidebar .wrapper {
-	    display: flex;
-		flex-wrap: wrap;
-		width: 100%;
+	   display: grid;
+	   grid-template-columns: 1fr 1fr 1fr;
+	   grid-gap: 1rem;
+	}
+    
+	.design-selection {
+		grid-column: 1/2;
+		background-color: $accent3-color;
+		margin-left: 4rem;
 	}
 
+	.design-archives {
+		grid-column: 2/3;
+		background-color: $accent4-color;
+	}
+
+	.zen-resources {
+		grid-column: 3/4;
+		background-color: $accent3-color;
+	}
+
+
 	.sidebar h3.select {
-		background-color: $accent2-color;
-		color: $accent1-color;
-		margin: 0 0 25px 0;
-		padding: 10px;
-		width: 200px;
-		height: 16px;
-		white-space: wrap;
+		@include sidebar-header;
 	}
 
 	.sidebar h3.archives {
-		background-color: $accent2-color;
-		color: $accent1-color;
-		margin: 0 0 25px 0;
-		padding: 10px;
-		width: 200px;
-		height: 16px;
-		white-space: wrap;
+		@include sidebar-header;
 	}
 
 	.sidebar h3.resources {
-		background-color: $accent2-color;
-		color: $accent1-color;
-		margin: 0 0 25px 0;
-		padding: 10px;
-		width: 200px;
-		height: 16px;
-		white-space: wrap;
+		@include sidebar-header;
 	}
-
-	
-	.sidebar li a:link {
-			color: $accent1-color;
-		}
-
-	.sidebar li a:visited {
-			color: $background-color;
-		}
 
 @media only screen and (min-width: 31em) { 
     body {
@@ -304,6 +295,12 @@ footer {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
     }
+
+	@mixin even-class() {
+		border: $background-color solid 1rem;
+		background-position: right;
+        background-repeat: no-repeat;	
+	}
 	header {
 		h1 {
    display: flex;
@@ -327,11 +324,9 @@ footer {
    }
 
    .preamble {
+	@include even-class;
 	background-color: $accent3-color;
-	border: $background-color solid 1rem;
     background-image: url("./Bryce_Grayscale.jpg");
-    background-position: right;
-    background-repeat: no-repeat;
   }
 
   .explanation  {
@@ -354,11 +349,9 @@ footer {
   }
 
   .participation {
+	@include even-class;
 	background-color: $accent2-color;
-	border: $background-color solid 1rem;
     background-image: url("./ocean.jpg");
-    background-position: right;
-    background-repeat: no-repeat;
   }
 
 .benefits {
@@ -381,11 +374,10 @@ footer {
 }
 
 .requirements {
+	@include even-class;
 	background-color: $accent3-color;
-	border: $background-color solid 1rem;
     background-image: url("./great-hunt.jpg");
-    background-position: right;
-    background-repeat: no-repeat;
+   
 }
 
 footer {
@@ -394,6 +386,18 @@ footer {
 	align-content: center;
 	color: $accent1-color;
 
+}
+
+.design-selection {
+	background-color: $primary-color;
+}
+
+.design-archives {
+	background-color: $primary-color;
+}
+
+.zen-resources {
+	background-color: $primary-color;
 }
 
 .sidebar .wrapper {
@@ -552,18 +556,5 @@ footer {
   }
 
  }
-
-// Here we lay the groundwork for responsive design
-@media only screen and (max-width: 800px) {
-	.preamble {
-		width: 40%;
-		background-image: none;
-	}
-
-
-
-
-
-}
 
 
