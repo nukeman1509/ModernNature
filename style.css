@@ -59,7 +59,9 @@ a:visited {
   color: #ffffff;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   text-decoration: underline;
   color: #c3c3c3;
 }
@@ -80,36 +82,38 @@ header h1 {
   flex-wrap: wrap;
   text-decoration: none;
   font-family: "Lora", serif;
-  margin: 1rem 10rem;
+  margin: 0 15rem 1rem 10rem;
   padding: 1rem;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
   color: #ffffff;
   border: solid 1px;
   border-color: #000000;
   background: #ff7f27;
-  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
 }
 header h2 {
   display: flex;
   flex-wrap: wrap;
   text-decoration: none;
   font-family: "Lora", serif;
-  margin: 1rem 10rem;
+  margin: 0 15rem 1rem 10rem;
   padding: 1rem;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
   color: #ffffff;
   border: solid 1px;
   border-color: #000000;
   background: #ff7f27;
-  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
 }
 header h3 {
   display: flex;
   flex-wrap: wrap;
   text-decoration: none;
   font-family: "Lora", serif;
-  margin: 1rem 10rem;
+  margin: 0 15rem 1rem 10rem;
   padding: 1rem;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
   color: #000000;
 }
 
@@ -212,7 +216,8 @@ footer {
   margin-bottom: 1rem;
 }
 
-footer a:link, footer a:visited {
+footer a:link,
+footer a:visited {
   margin-right: 20px;
   padding: 0 2em;
   background-color: #ff7f27;
@@ -286,21 +291,14 @@ footer a:link, footer a:visited {
 }
 
 @media only screen and (min-width: 31em) {
-  body {
-    max-width: 1400px;
+  .page-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "int int as" "sup sup as" "par par as" "ben ben as" "req req as" "ft ft ft";
   }
   header h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 3rem;
   }
   header h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 2rem;
   }
   header h3 {
@@ -317,11 +315,11 @@ footer a:link, footer a:visited {
     background-image: url("./Bryce_Grayscale.jpg");
   }
   .explanation {
-    background-color: #ff7f27;
     border: #000000 solid 1rem;
-    background-image: url("./waterfall.jpg");
     background-position: left;
     background-repeat: no-repeat;
+    background-color: #ff7f27;
+    background-image: url("./waterfall.jpg");
   }
   .explanation h3 {
     text-align: left;
@@ -342,11 +340,11 @@ footer a:link, footer a:visited {
     background-image: url("./ocean.jpg");
   }
   .benefits {
-    background-color: #ff7f27;
     border: #000000 solid 1rem;
-    background-image: url("./sunflower.jpg");
     background-position: left;
     background-repeat: no-repeat;
+    background-color: #ff7f27;
+    background-image: url("./sunflower.jpg");
   }
   .benefits h3 {
     text-align: left;
@@ -369,7 +367,7 @@ footer a:link, footer a:visited {
   footer {
     display: flex;
     width: 100%;
-    align-content: center;
+    justify-content: center;
     color: #ffffff;
   }
   .design-selection {
@@ -383,18 +381,17 @@ footer a:link, footer a:visited {
   }
   .sidebar .wrapper {
     display: block;
+    margin-right: 8rem;
   }
   .sidebar {
-    position: absolute;
-    top: 0;
-    margin-left: 1350px;
+    margin: 0 2rem 0 0;
   }
   .sidebar li {
     line-height: 2em;
     display: block;
   }
   .sidebar li:nth-child(even) {
-    margin-right: 35%;
+    margin-right: 50%;
     padding: 1em;
     background: linear-gradient(0deg, rgb(255, 151, 0) 0%, rgb(251, 75, 2) 100%);
     line-height: 42px;

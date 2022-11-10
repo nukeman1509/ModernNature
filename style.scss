@@ -13,7 +13,7 @@
 
 //Variables
 //colors
-$background-color:#000000;
+$background-color: #000000;
 $primary-color: #c3c3c3;
 $accent1-color: #ffffff;
 $accent2-color: #3f48cc;
@@ -21,7 +21,7 @@ $accent3-color: #48925D;
 $accent4-color: #ff7f27;
 
 //fonts
-$font-headings:'Lora', serif;
+$font-headings: 'Lora', serif;
 $font-body: Arial, Helvetica, sans-serif;
 
 #zen-intro {
@@ -53,11 +53,11 @@ aside {
 }
 
 body {
-background-color: $primary-color;
-font-family: $font-body;
-font-size: 16px;
-margin: 0;
-padding: 0;
+	background-color: $primary-color;
+	font-family: $font-body;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -70,16 +70,22 @@ body {
 	flex-wrap: wrap;
 	text-decoration: none;
 	font-family: $font-headings;
-	margin: 1rem 10rem;
+	margin:0 15rem 1rem 10rem;
 	padding: 1rem;
-  }
+	box-shadow:
+			-7px -7px 20px 0px rgba(255, 255, 255, .9),
+			-4px -4px 5px 0px rgba(255, 255, 255, .9),
+			7px 7px 20px 0px rgba(0, 0, 0, .2),
+			4px 4px 5px 0px rgba(0, 0, 0, .3);
+		transition: all 0.3s ease;
+}
 
 @mixin class() {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	width: 1200px;
 	margin: 20px 20px 20px 10px;
-	padding: 0 2rem;	
+	padding: 0 2rem;
 }
 
 @mixin sidebar-header() {
@@ -95,24 +101,28 @@ body {
 	font-family: $font-body;
 	text-align: left;
 	color: $background-color;
-	padding: 0 2rem;		
+	padding: 0 2rem;
 }
 
- a:link {
-		font-weight: bold;
-		text-decoration: none;
-		color: $background-color;
-		
-	}
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color: $background-color;
+
+}
+
 a:visited {
-		font-weight: bold;
-		text-decoration: none;
-		color: $accent1-color;
-	}
-a:hover, a:focus, a:active {
-		text-decoration: underline;
-		color: $primary-color;
-	}
+	font-weight: bold;
+	text-decoration: none;
+	color: $accent1-color;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+	color: $primary-color;
+}
 
 abbr {
 	margin: 0 5px;
@@ -122,97 +132,91 @@ abbr {
 
 /* specific divs */
 .page-wrapper {
-display: grid;
-grid-template-areas:
-"int"
-"as"
-"sup"
-"par"
-"ben"
-"req"
-"ft";
+	display: grid;
+	grid-template-areas:
+		"int"
+		"as"
+		"sup"
+		"par"
+		"ben"
+		"req"
+		"ft";
 }
 
 header {
-	 h1 {
-@include headings;
-color: $accent1-color;
-border: solid 1px;
-border-color: $background-color;
-background: $accent4-color;
-	box-shadow:
-	 -7px -7px 20px 0px rgba(255,255,255,.9),
-	 -4px -4px 5px 0px rgba(255,255,255,.9),
-	 7px 7px 20px 0px rgba(0,0,0,.2),
-	 4px 4px 5px 0px rgba(0,0,0,.3);
-	transition: all 0.3s ease;
-}
+	h1 {
+		@include headings;
+		color: $accent1-color;
+		border: solid 1px;
+		border-color: $background-color;
+		background: $accent4-color;
+		
+	}
 
-     h2 {
-@include headings;
-color: $accent1-color;
-border: solid 1px;
-border-color: $background-color;
-background: $accent4-color;
-	box-shadow:
-	 -7px -7px 20px 0px rgba(255,255,255,.9),
-	 -4px -4px 5px 0px rgba(255,255,255,.9),
-	 7px 7px 20px 0px rgba(0,0,0,.2),
-	 4px 4px 5px 0px rgba(0,0,0,.3);
-	transition: all 0.3s ease;
-}
-     h3 {
-@include headings;
-color: $background-color;
-	 }
+	h2 {
+		@include headings;
+		color: $accent1-color;
+		border: solid 1px;
+		border-color: $background-color;
+		background: $accent4-color;
+	}
+
+	h3 {
+		@include headings;
+		color: $background-color;
+	}
 }
 
 .summary {
 	@include class;
 	color: $accent1-color;
+
 	p {
 		font-family: $font-body;
 		text-align: center;
 		margin: 0 0 1rem 6rem;
 		padding: 0 10rem;
 		border: solid 1px;
-        border-color: $background-color;
+		border-color: $background-color;
 		background: $accent4-color;
-	box-shadow:
-	 -7px -7px 20px 0px rgba(255,255,255,.9),
-	 -4px -4px 5px 0px rgba(255,255,255,.9),
-	 7px 7px 20px 0px rgba(0,0,0,.2),
-	 4px 4px 5px 0px rgba(0,0,0,.3);
-	transition: all 0.3s ease;
+		box-shadow:
+			-7px -7px 20px 0px rgba(255, 255, 255, .9),
+			-4px -4px 5px 0px rgba(255, 255, 255, .9),
+			7px 7px 20px 0px rgba(0, 0, 0, .2),
+			4px 4px 5px 0px rgba(0, 0, 0, .3);
+		transition: all 0.3s ease;
 	}
 }
 
 .preamble {
-    @include class;
+	@include class;
 	background-color: $accent4-color;
+
 	p {
 		@include paragraph;
 	}
-	
+
 }
 
 .explanation {
-	@include class;	
+	@include class;
 	background-color: $accent3-color;
-		@include paragraph;
-	}
+	@include paragraph;
+}
 
 .participation {
 	@include class;
 	background-color: $accent2-color;
+
 	p {
-		@include paragraph;	
+		@include paragraph;
 	}
 }
 
 .benefits {
 	@include class;
-	background-color: $accent4-color;	
+	background-color: $accent4-color;
+
 	p {
 		@include paragraph;
 	}
@@ -221,340 +225,370 @@ color: $background-color;
 .requirements {
 	@include class;
 	background-color: $accent3-color;
+
 	p {
 		@include paragraph;
 	}
 }
+
 footer {
 	font-family: $font-headings;
 	text-align: center;
 	margin-bottom: 1rem;
 }
 
-	footer a:link, footer a:visited {
-		margin-right: 20px;
-		padding: 0 2em;
-		background-color: $accent4-color;
-	}
+footer a:link,
+footer a:visited {
+	margin-right: 20px;
+	padding: 0 2em;
+	background-color: $accent4-color;
+}
+
 .sidebar {
 	display: flex;
 	flex-wrap: wrap;
+
 	ul {
 		margin: 0;
 		padding: 0;
 	}
+
 	li {
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
 		justify-content: flex-start;
-		padding:.5rem;
+		padding: .5rem;
 		margin-bottom: 5px;
 		list-style-type: none;
-		}
-	} 
-
-	.sidebar .wrapper {
-	   display: grid;
-	   grid-template-columns: 1fr 1fr 1fr;
-	   grid-gap: 1rem;
 	}
-    
-	.design-selection {
-		grid-column: 1/2;
-		background-color: $accent3-color;
-		margin-left: 4rem;
-	}
+}
 
-	.design-archives {
-		grid-column: 2/3;
-		background-color: $accent4-color;
-	}
+.sidebar .wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1rem;
+}
 
-	.zen-resources {
-		grid-column: 3/4;
-		background-color: $accent3-color;
-	}
+.design-selection {
+	grid-column: 1/2;
+	background-color: $accent3-color;
+	margin-left: 4rem;
+}
+
+.design-archives {
+	grid-column: 2/3;
+	background-color: $accent4-color;
+}
+
+.zen-resources {
+	grid-column: 3/4;
+	background-color: $accent3-color;
+}
 
 
-	.sidebar h3.select {
-		@include sidebar-header;
-	}
+.sidebar h3.select {
+	@include sidebar-header;
+}
 
-	.sidebar h3.archives {
-		@include sidebar-header;
-	}
+.sidebar h3.archives {
+	@include sidebar-header;
+}
 
-	.sidebar h3.resources {
-		@include sidebar-header;
-	}
+.sidebar h3.resources {
+	@include sidebar-header;
+}
 
-@media only screen and (min-width: 31em) { 
-    body {
-        max-width: 1400px;
+@media only screen and (min-width: 31em) {
+
+	.page-wrapper {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-    }
+		grid-template-areas:
+			"int int as"
+			"sup sup as"
+			"par par as"
+			"ben ben as"
+			"req req as"
+			"ft ft ft";
+	}
 
 	@mixin even-class() {
 		border: $background-color solid 1rem;
 		background-position: right;
-        background-repeat: no-repeat;	
+		background-repeat: no-repeat;
 	}
+
+	@mixin odd-class() {
+		border: $background-color solid 1rem;
+		background-position: left;
+		background-repeat: no-repeat;
+	}
+
 	header {
-		h1 {
-   display: flex;
-   justify-content: center;
-   align-items: center;	
-   font-size: 3rem;
-   }
-   
-		h2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;		
-   font-size: 2rem;	
-   }
-        h3 {
-	font-size: 1.5rem;		
+	  h1 {
+		font-size: 3rem;
+		}
+
+	  h2 {
+		font-size: 2rem;
+		}
+
+	  h3 {
+		font-size: 1.5rem;
+		}
 	}
-   }
-   p {
-	width: 50%;
-   }
 
-   .preamble {
-	@include even-class;
-	background-color: $accent3-color;
-    background-image: url("./Bryce_Grayscale.jpg");
-  }
-
-  .explanation  {
-	background-color: $accent4-color;
-	border: $background-color solid 1rem;
-    background-image: url("./waterfall.jpg");
-    background-position: left;
-    background-repeat: no-repeat;
-    h3 {
-		text-align: left;
-		margin-left: 50%;
-	}    
 	p {
-		text-align: left;
-		margin-left: 50%;
-		margin-right: 100px;
-		padding-right: 2rem;
-		padding-left: 2rem;
-	}
-  }
-
-  .participation {
-	@include even-class;
-	background-color: $accent2-color;
-    background-image: url("./ocean.jpg");
-  }
-
-.benefits {
-	background-color: $accent4-color;
-	border: $background-color solid 1rem;
-    background-image: url("./sunflower.jpg");
-    background-position: left;
-    background-repeat: no-repeat;
-	h3 {
-		text-align: left;
-		margin-left: 50%;
-	}    
-	p {
-		text-align: left;
-		margin-left: 50%;
-		margin-right: 100px;
-		padding-right: 2rem;
-		padding-left: 2rem;
-	}	
-}
-
-.requirements {
-	@include even-class;
-	background-color: $accent3-color;
-    background-image: url("./great-hunt.jpg");
-   
-}
-
-footer {
-	display: flex;
-	width: 100%;
-	align-content: center;
-	color: $accent1-color;
-
-}
-
-.design-selection {
-	background-color: $primary-color;
-}
-
-.design-archives {
-	background-color: $primary-color;
-}
-
-.zen-resources {
-	background-color: $primary-color;
-}
-
-.sidebar .wrapper {
-	    display: block;
+		width: 50%;
 	}
 
-.sidebar {
-	position: absolute;
-	top: 0;
-	margin-left: 1350px;
-	li {
-		line-height: 2em;
+	.preamble {
+		@include even-class;
+		background-color: $accent3-color;
+		background-image: url("./Bryce_Grayscale.jpg");
+	}
+
+	.explanation {
+		@include odd-class;
+		background-color: $accent4-color;
+		background-image: url("./waterfall.jpg");
+		h3 {
+			text-align: left;
+			margin-left: 50%;
+		}
+		p {
+			text-align: left;
+			margin-left: 50%;
+			margin-right: 100px;
+			padding-right: 2rem;
+			padding-left: 2rem;
+		}
+	}
+
+	.participation {
+		@include even-class;
+		background-color: $accent2-color;
+		background-image: url("./ocean.jpg");
+	}
+
+	.benefits {
+		@include odd-class;
+		background-color: $accent4-color;
+		background-image: url("./sunflower.jpg");
+		h3 {
+			text-align: left;
+			margin-left: 50%;
+		}
+		p {
+			text-align: left;
+			margin-left: 50%;
+			margin-right: 100px;
+			padding-right: 2rem;
+			padding-left: 2rem;
+		}
+	}
+
+	.requirements {
+		@include even-class;
+		background-color: $accent3-color;
+		background-image: url("./great-hunt.jpg");
+
+	}
+
+	footer {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		color: $accent1-color;
+	}
+
+	.design-selection {
+		background-color: $primary-color;
+	}
+
+	.design-archives {
+		background-color: $primary-color;
+	}
+
+	.zen-resources {
+		background-color: $primary-color;
+	}
+
+	.sidebar .wrapper {
 		display: block;
+		margin-right: 8rem;
 	}
+
+	.sidebar {
+	   margin:0 2rem 0 0;
+		li {
+		  line-height: 2em;
+		  display: block;
+		}
+	}
+
+
+	.sidebar li:nth-child(even) {
+		margin-right: 50%;
+		padding: 1em;
+		background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+		line-height: 42px;
+		border: none;
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.sidebar li:nth-child(even):before,
+	.sidebar li:nth-child(even):after {
+		position: absolute;
+		content: "";
+		right: 0;
+		bottom: 0;
+		background: rgba(251, 75, 2, 1);
+		box-shadow:
+			-7px -7px 20px 0px rgba(255, 255, 255, .9),
+			-4px -4px 5px 0px rgba(255, 255, 255, .9),
+			7px 7px 20px 0px rgba(0, 0, 0, .2),
+			4px 4px 5px 0px rgba(0, 0, 0, .3);
+		transition: all 0.3s ease;
+	}
+
+	.sidebar li:nth-child(even):before {
+		height: 0%;
+		width: 2px;
+	}
+
+	.sidebar li:nth-child(even):after {
+		width: 0%;
+		height: 2px;
+	}
+
+	.sidebar li:nth-child(even):hover {
+		color: rgba(251, 75, 2, 1);
+		background: transparent;
+	}
+
+	.sidebar li:nth-child(even):hover:before {
+		height: 100%;
+	}
+
+	.sidebar li:nth-child(even):hover:after {
+		width: 100%;
+	}
+
+	.sidebar li:nth-child(even):before,
+	.sidebar li:nth-child(even):after {
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		background: rgba(251, 75, 2, 1);
+		box-shadow:
+			-7px -7px 20px 0px rgba(255, 255, 255, .9),
+			-4px -4px 5px 0px rgba(255, 255, 255, .9),
+			7px 7px 20px 0px rgba(0, 0, 0, .2),
+			4px 4px 5px 0px rgba(0, 0, 0, .3);
+		transition: all 0.3s ease;
+	}
+
+	.sidebar li:nth-child(even):before {
+		width: 2px;
+		height: 0%;
+	}
+
+	.sidebar li:nth-child(even):after {
+		height: 2px;
+		width: 0%;
+	}
+
+	.sidebar li:nth-child(even):hover:before {
+		height: 100%;
+	}
+
+	.sidebar li:nth-child(even):hover:after {
+		width: 100%;
+	}
+
+	.sidebar li:nth-child(odd) {
+		margin-left: 35%;
+		padding: 1em;
+		background: $accent3-color;
+		background: linear-gradient(0deg, $accent3-color 0%, $accent2-color 100%);
+		width: 130px;
+		height: 40px;
+		line-height: 42px;
+		border: none;
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.sidebar li:nth-child(odd):before,
+	.sidebar li:nth-child(odd):after {
+		position: absolute;
+		content: "";
+		right: 0;
+		top: 0;
+		background: $accent3-color;
+		transition: all 0.3s ease;
+	}
+
+	.sidebar li:nth-child(odd):before {
+		height: 0%;
+		width: 2px;
+	}
+
+	.sidebar li:nth-child(odd):after {
+		width: 0%;
+		height: 2px;
+	}
+
+	.sidebar li:nth-child(odd):hover {
+		background: transparent;
+		box-shadow: none;
+	}
+
+	.sidebar li:nth-child(odd):hover:before {
+		height: 100%;
+	}
+
+	.sidebar li:nth-child(odd):hover:after {
+		width: 100%;
+	}
+
+	.sidebar li:nth-child(odd):hover {
+		color: rgba(2, 126, 251, 1);
+	}
+
+	.sidebar li:nth-child(odd):before,
+	.sidebar li:nth-child(odd):after {
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: 0;
+		background: $accent3-color;
+		transition: all 0.3s ease;
+	}
+
+	.sidebar li:nth-child(odd):before {
+		width: 2px;
+		height: 0%;
+	}
+
+	.sidebar li:nth-child(odd):after {
+		width: 0%;
+		height: 2px;
+	}
+
+	.sidebar li:nth-child(odd):hover:before {
+		height: 100%;
+	}
+
+	.sidebar li:nth-child(odd):hover:after {
+		width: 100%;
+	}
+
 }
-
- 
-.sidebar li:nth-child(even) {
-	margin-right:35%;
-	padding: 1em;
-    background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
-	line-height: 42px;
-	border: none;
-	position: relative;
-	display: block;
-	width: 100%;
-	height: 100%;
-  }
-  .sidebar li:nth-child(even):before,
-  .sidebar li:nth-child(even):after {
-	position: absolute;
-	content: "";
-	right: 0;
-	bottom: 0;
-	background: rgba(251,75,2,1);
-	box-shadow:
-	 -7px -7px 20px 0px rgba(255,255,255,.9),
-	 -4px -4px 5px 0px rgba(255,255,255,.9),
-	 7px 7px 20px 0px rgba(0,0,0,.2),
-	 4px 4px 5px 0px rgba(0,0,0,.3);
-	transition: all 0.3s ease;
-  }
-  .sidebar li:nth-child(even):before{
-	 height: 0%;
-	 width: 2px;
-  }
-  .sidebar li:nth-child(even):after {
-	width: 0%;
-	height: 2px;
-  }
-  .sidebar li:nth-child(even):hover{
-	color: rgba(251,75,2,1);
-	background: transparent;
-  }
-  .sidebar li:nth-child(even):hover:before {
-	height: 100%;
-  }
-  .sidebar li:nth-child(even):hover:after {
-	width: 100%;
-  }
-  .sidebar li:nth-child(even):before,
-  .sidebar li:nth-child(even):after {
-	position: absolute;
-	content: "";
-	left: 0;
-	top: 0;
-	background: rgba(251,75,2,1);
-	box-shadow:
-	 -7px -7px 20px 0px rgba(255,255,255,.9),
-	 -4px -4px 5px 0px rgba(255,255,255,.9),
-	 7px 7px 20px 0px rgba(0,0,0,.2),
-	 4px 4px 5px 0px rgba(0,0,0,.3);
-	transition: all 0.3s ease;
-  }
-  .sidebar li:nth-child(even):before {
-	width: 2px;
-	height: 0%;
-  }
-  .sidebar li:nth-child(even):after {
-	height: 2px;
-	width: 0%;
-  }
-  .sidebar li:nth-child(even):hover:before {
-	height: 100%;
-  }
-  .sidebar li:nth-child(even):hover:after {
-	width: 100%;
-  }
-
-.sidebar li:nth-child(odd) {
-	margin-left: 35%;
-	padding: 1em;
-	background: $accent3-color;
-    background: linear-gradient(0deg,$accent3-color 0%, $accent2-color 100%);
-	width: 130px;
-	height: 40px;
-	line-height: 42px;
-	border: none;
-	position: relative;
-	display: block;
-	width: 100%;
-	height: 100%;
-  }
-  .sidebar li:nth-child(odd):before,
-  .sidebar li:nth-child(odd):after {
-	position: absolute;
-	content: "";
-	right: 0;
-	top: 0;
-	 background: $accent3-color;
-	transition: all 0.3s ease;
-  }
-  .sidebar li:nth-child(odd):before {
-	height: 0%;
-	width: 2px;
-  }
-  .sidebar li:nth-child(odd):after {
-	width: 0%;
-	height: 2px;
-  }
-  .sidebar li:nth-child(odd):hover{
-	 background: transparent;
-	box-shadow: none;
-  }
-  .sidebar li:nth-child(odd):hover:before {
-	height: 100%;
-  }
-  .sidebar li:nth-child(odd):hover:after {
-	width: 100%;
-  }
-  .sidebar li:nth-child(odd):hover{
-	 color: rgba(2,126,251,1);
-  }
-  .sidebar li:nth-child(odd):before,
-  .sidebar li:nth-child(odd):after {
-	position: absolute;
-	content: "";
-	left: 0;
-	bottom: 0;
-	 background: $accent3-color;
-	transition: all 0.3s ease;
-  }
-  .sidebar li:nth-child(odd):before {
-	width: 2px;
-	height: 0%;
-  }
-  .sidebar li:nth-child(odd):after {
-	width: 0%;
-	height: 2px;
-  }
-  .sidebar li:nth-child(odd):hover:before {
-	height: 100%;
-  }
-  .sidebar li:nth-child(odd):hover:after {
-	width: 100%;
-  }
-
- }
-
-
