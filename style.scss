@@ -83,7 +83,7 @@ body {
 @mixin class() {
 	display: flex;
 	flex-direction: column;
-	width: 1200px;
+	width: 90%;
 	margin: 20px 20px 20px 10px;
 	padding: 0 2rem;
 }
@@ -93,7 +93,7 @@ body {
 	color: $accent1-color;
 	margin: 1rem;
 	padding: 10px;
-	width: 200px;
+	width: 10%;
 	height: 16px;
 }
 
@@ -346,16 +346,19 @@ footer a:visited {
 		@include even-class;
 		background-color: $accent3-color;
 		background-image: url("./Bryce_Grayscale.jpg");
+		background-size: 40%;
 	}
 
 	.explanation {
 		@include odd-class;
 		background-color: $accent4-color;
 		background-image: url("./waterfall.jpg");
+		background-size: 50%;
 		h3 {
 			text-align: left;
 			margin-left: 50%;
 		}
+
 		p {
 			text-align: left;
 			margin-left: 50%;
@@ -369,16 +372,19 @@ footer a:visited {
 		@include even-class;
 		background-color: $accent2-color;
 		background-image: url("./ocean.jpg");
+		background-size: 45%;
 	}
 
 	.benefits {
 		@include odd-class;
 		background-color: $accent4-color;
 		background-image: url("./sunflower.jpg");
+		background-size: 40%;
 		h3 {
 			text-align: left;
 			margin-left: 50%;
 		}
+
 		p {
 			text-align: left;
 			margin-left: 50%;
@@ -392,7 +398,7 @@ footer a:visited {
 		@include even-class;
 		background-color: $accent3-color;
 		background-image: url("./great-hunt.jpg");
-
+		background-size: 40%;
 	}
 
 	footer {
@@ -416,7 +422,7 @@ footer a:visited {
 
 	.sidebar .wrapper {
 		display: block;
-		margin-right: 8rem;
+		margin-right: 10rem;
 	}
 
 	.sidebar {
@@ -429,7 +435,7 @@ footer a:visited {
 
 
 	.sidebar li:nth-child(even) {
-		margin-right: 50%;
+		margin-right: 25%;
 		padding: 1em;
 		background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
 		line-height: 42px;
@@ -512,7 +518,7 @@ footer a:visited {
 	}
 
 	.sidebar li:nth-child(odd) {
-		margin-left: 35%;
+		margin-left: 15%;
 		padding: 1em;
 		background: $accent3-color;
 		background: linear-gradient(0deg, $accent3-color 0%, $accent2-color 100%);
