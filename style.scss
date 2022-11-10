@@ -83,7 +83,7 @@ body {
 @mixin class() {
 	display: flex;
 	flex-direction: column;
-	width: 90%;
+	width: 1200px;
 	margin: 20px 20px 20px 10px;
 	padding: 0 2rem;
 }
@@ -93,7 +93,7 @@ body {
 	color: $accent1-color;
 	margin: 1rem;
 	padding: 10px;
-	width: 10%;
+	width: 200px;
 	height: 16px;
 }
 
@@ -279,13 +279,11 @@ footer a:visited {
 .design-archives {
 	grid-column: 2/3;
 	background-color: $accent4-color;
-	margin-left: 4rem;
 }
 
 .zen-resources {
 	grid-column: 3/4;
 	background-color: $accent3-color;
-	margin-left: 4rem;
 }
 
 
@@ -326,6 +324,19 @@ footer a:visited {
 		background-repeat: no-repeat;
 	}
 
+	@mixin odd-h3() {
+	  text-align: left;
+	  margin-left: 50%;
+	}
+
+	@mixin odd-paragraph() {
+	  text-align: left;
+	  margin-left: 50%;
+	  margin-right: 100px;
+	  padding-right: 2rem;
+	  padding-left: 2rem;	
+	}
+
 	header {
 	  h1 {
 		font-size: 3rem;
@@ -348,25 +359,17 @@ footer a:visited {
 		@include even-class;
 		background-color: $accent3-color;
 		background-image: url("./Bryce_Grayscale.jpg");
-		background-size: 40%;
 	}
 
 	.explanation {
 		@include odd-class;
 		background-color: $accent4-color;
 		background-image: url("./waterfall.jpg");
-		background-size: 50%;
 		h3 {
-			text-align: left;
-			margin-left: 50%;
+		  @include odd-h3;
 		}
-
 		p {
-			text-align: left;
-			margin-left: 50%;
-			margin-right: 100px;
-			padding-right: 2rem;
-			padding-left: 2rem;
+			@include odd-paragraph;
 		}
 	}
 
@@ -374,25 +377,17 @@ footer a:visited {
 		@include even-class;
 		background-color: $accent2-color;
 		background-image: url("./ocean.jpg");
-		background-size: 45%;
 	}
 
 	.benefits {
 		@include odd-class;
 		background-color: $accent4-color;
 		background-image: url("./sunflower.jpg");
-		background-size: 40%;
 		h3 {
-			text-align: left;
-			margin-left: 50%;
+			@include odd-h3;
 		}
-
 		p {
-			text-align: left;
-			margin-left: 50%;
-			margin-right: 100px;
-			padding-right: 2rem;
-			padding-left: 2rem;
+			@include odd-paragraph;
 		}
 	}
 
@@ -400,7 +395,7 @@ footer a:visited {
 		@include even-class;
 		background-color: $accent3-color;
 		background-image: url("./great-hunt.jpg");
-		background-size: 40%;
+
 	}
 
 	footer {
@@ -424,7 +419,7 @@ footer a:visited {
 
 	.sidebar .wrapper {
 		display: block;
-		margin-right: 10rem;
+		margin-right: 8rem;
 	}
 
 	.sidebar {
@@ -437,7 +432,7 @@ footer a:visited {
 
 
 	.sidebar li:nth-child(even) {
-		margin-right: 25%;
+		margin-right: 50%;
 		padding: 1em;
 		background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
 		line-height: 42px;
@@ -520,7 +515,7 @@ footer a:visited {
 	}
 
 	.sidebar li:nth-child(odd) {
-		margin-left: 15%;
+		margin-left: 35%;
 		padding: 1em;
 		background: $accent3-color;
 		background: linear-gradient(0deg, $accent3-color 0%, $accent2-color 100%);
