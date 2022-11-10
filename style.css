@@ -256,11 +256,13 @@ footer a:visited {
 .design-archives {
   grid-column: 2/3;
   background-color: #ff7f27;
+  margin-left: 4rem;
 }
 
 .zen-resources {
   grid-column: 3/4;
   background-color: #48925D;
+  margin-left: 4rem;
 }
 
 .sidebar h3.select {
