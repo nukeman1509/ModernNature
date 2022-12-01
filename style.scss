@@ -11,6 +11,12 @@
 /* basic elements */
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
+:root {
+	--fluid-type-min: 1.5rem;
+	--fluid-type-max: 3rem;
+	--fluid-type-target: 3vw;
+}
+
 //Variables
 //colors
 $background-color: #000000;
@@ -71,14 +77,11 @@ body {
 	flex-wrap: wrap;
 	text-decoration: none;
 	font-family: $font-headings;
-	margin:0 15rem 1rem 10rem;
+	font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
+	margin: 0 15rem 1rem 10rem;
 	padding: 1rem;
-	box-shadow:
-			-7px -7px 20px 0px rgba(255, 255, 255, .9),
-			-4px -4px 5px 0px rgba(255, 255, 255, .9),
-			7px 7px 20px 0px rgba(0, 0, 0, .2),
-			4px 4px 5px 0px rgba(0, 0, 0, .3);
-		transition: all 0.3s ease;
+	box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9), -4px -4px 5px 0px rgba(255, 255, 255, .9), 7px 7px 20px 0px rgba(0, 0, 0, .2), 4px 4px 5px 0px rgba(0, 0, 0, .3);
+	transition: all 0.3s ease;
 }
 
 @mixin class() {
@@ -192,7 +195,7 @@ header {
 
 .preamble {
 	@include class;
-	background-color: $accent4-color;
+	background: radial-gradient($accent4-color, $accent3-color);
 
 	p {
 		@include paragraph;
@@ -201,13 +204,13 @@ header {
 
 .explanation {
 	@include class;
-	background-color: $accent3-color;
+	background: radial-gradient($accent3-color, $accent4-color);
 	@include paragraph;
 }
 
 .participation {
 	@include class;
-	background-color: $accent2-color;
+	background: radial-gradient($accent2-color, $accent3-color);
 
 	p {
 		@include paragraph;
@@ -216,7 +219,7 @@ header {
 
 .benefits {
 	@include class;
-	background-color: $accent4-color;
+	background: radial-gradient($accent2-color, $accent4-color);
 
 	p {
 		@include paragraph;
@@ -225,7 +228,7 @@ header {
 
 .requirements {
 	@include class;
-	background-color: $accent3-color;
+	background: radial-gradient($accent4-color, $accent2-color);
 
 	p {
 		@include paragraph;

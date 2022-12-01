@@ -6,6 +6,12 @@
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 /* basic elements */
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+:root {
+  --fluid-type-min: 1.5rem;
+  --fluid-type-max: 3rem;
+  --fluid-type-target: 3vw;
+}
+
 #zen-intro {
   grid-area: int;
 }
@@ -86,6 +92,7 @@ header h1 {
   flex-wrap: wrap;
   text-decoration: none;
   font-family: "Lora", serif;
+  font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
   margin: 0 15rem 1rem 10rem;
   padding: 1rem;
   box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
@@ -100,6 +107,7 @@ header h2 {
   flex-wrap: wrap;
   text-decoration: none;
   font-family: "Lora", serif;
+  font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
   margin: 0 15rem 1rem 10rem;
   padding: 1rem;
   box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
@@ -114,6 +122,7 @@ header h3 {
   flex-wrap: wrap;
   text-decoration: none;
   font-family: "Lora", serif;
+  font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
   margin: 0 15rem 1rem 10rem;
   padding: 1rem;
   box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9), -4px -4px 5px 0px rgba(255, 255, 255, 0.9), 7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
