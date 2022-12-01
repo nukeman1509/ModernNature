@@ -78,6 +78,9 @@ abbr {
   grid-template-areas: "int" "as" "sup" "par" "ben" "req" "ft";
 }
 
+header {
+  margin: 0 0 1rem 1rem;
+}
 header h1 {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +132,7 @@ header h3 {
 .summary p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin: 0 0 1rem 8rem;
+  margin: 0 0 1rem 7rem;
   padding: 0 10rem;
   border: solid 1px;
   border-color: #000000;
@@ -296,6 +299,22 @@ footer a:visited {
     display: grid;
     grid-template-areas: "int int as" "sup sup as" "par par as" "ben ben as" "req req as" "ft ft ft";
   }
+  @keyframes left-slide {
+    0% {
+      transform: translate(-300%, 0%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+  @keyframes right-slide {
+    0% {
+      transform: translate(300%, 0%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
   header h1 {
     font-size: 3rem;
   }
@@ -309,16 +328,18 @@ footer a:visited {
     width: 50%;
   }
   .preamble {
-    border: #000000 solid 1rem;
+    border: #000000 solid 2px;
     background-position: right;
     background-repeat: no-repeat;
+    animation: right-slide 1s ease;
     background-color: #48925D;
     background-image: url("./Bryce_Grayscale.jpg");
   }
   .explanation {
-    border: #000000 solid 1rem;
+    border: #000000 solid 2px;
     background-position: left;
     background-repeat: no-repeat;
+    animation: left-slide 1s ease;
     background-color: #ff7f27;
     background-image: url("./waterfall.jpg");
   }
@@ -334,16 +355,18 @@ footer a:visited {
     padding-left: 2rem;
   }
   .participation {
-    border: #000000 solid 1rem;
+    border: #000000 solid 2px;
     background-position: right;
     background-repeat: no-repeat;
+    animation: right-slide 1s ease;
     background-color: #3f48cc;
     background-image: url("./ocean.jpg");
   }
   .benefits {
-    border: #000000 solid 1rem;
+    border: #000000 solid 2px;
     background-position: left;
     background-repeat: no-repeat;
+    animation: left-slide 1s ease;
     background-color: #ff7f27;
     background-image: url("./sunflower.jpg");
   }
@@ -359,9 +382,10 @@ footer a:visited {
     padding-left: 2rem;
   }
   .requirements {
-    border: #000000 solid 1rem;
+    border: #000000 solid 2px;
     background-position: right;
     background-repeat: no-repeat;
+    animation: right-slide 1s ease;
     background-color: #48925D;
     background-image: url("./great-hunt.jpg");
   }

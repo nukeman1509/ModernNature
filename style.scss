@@ -145,13 +145,14 @@ abbr {
 }
 
 header {
+	margin: 0 0 1rem 1rem;
+
 	h1 {
 		@include headings;
 		color: $accent1-color;
 		border: solid 1px;
 		border-color: $background-color;
 		background: $accent4-color;
-		
 	}
 
 	h2 {
@@ -175,7 +176,7 @@ header {
 	p {
 		font-family: $font-body;
 		text-align: center;
-		margin: 0 0 1rem 8rem;
+		margin: 0 0 1rem 7rem;
 		padding: 0 10rem;
 		border: solid 1px;
 		border-color: $background-color;
@@ -196,7 +197,6 @@ header {
 	p {
 		@include paragraph;
 	}
-
 }
 
 .explanation {
@@ -314,15 +314,17 @@ footer a:visited {
 	}
 
 	@mixin even-class() {
-		border: $background-color solid 1rem;
+		border: $background-color solid 2px;
 		background-position: right;
 		background-repeat: no-repeat;
+		animation: right-slide 1s ease;
 	}
 
 	@mixin odd-class() {
-		border: $background-color solid 1rem;
+		border: $background-color solid 2px;
 		background-position: left;
 		background-repeat: no-repeat;
+		animation: left-slide 1s ease;
 	}
 
 	@mixin odd-h3() {
@@ -337,6 +339,27 @@ footer a:visited {
 	  padding-right: 2rem;
 	  padding-left: 2rem;	
 	}
+
+	@keyframes left-slide {
+		0% {
+			transform: translate(-300%,0%);
+		}
+
+		100% {
+			transform: translate(0%,0%);
+		}
+	}
+
+	@keyframes right-slide {
+		0% {
+			transform: translate(300%,0%);
+		}
+
+		100% {
+			transform: translate(0%,0%);
+		}
+	}
+
 
 	header {
 	  h1 {
