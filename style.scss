@@ -75,6 +75,7 @@ body {
 @mixin headings() {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	text-decoration: none;
 	font-family: $font-headings;
 	font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
@@ -195,7 +196,7 @@ header {
 
 .preamble {
 	@include class;
-	background: radial-gradient($accent4-color, $accent3-color);
+	background-image: radial-gradient($accent4-color, $accent3-color);
 
 	p {
 		@include paragraph;
@@ -204,13 +205,13 @@ header {
 
 .explanation {
 	@include class;
-	background: radial-gradient($accent3-color, $accent4-color);
+	background-image: radial-gradient($accent3-color, $accent4-color);
 	@include paragraph;
 }
 
 .participation {
 	@include class;
-	background: radial-gradient($accent2-color, $accent3-color);
+	background-image: radial-gradient($accent2-color, $accent3-color);
 
 	p {
 		@include paragraph;
@@ -219,7 +220,7 @@ header {
 
 .benefits {
 	@include class;
-	background: radial-gradient($accent2-color, $accent4-color);
+	background-image: radial-gradient($accent2-color, $accent4-color);
 
 	p {
 		@include paragraph;
@@ -228,7 +229,7 @@ header {
 
 .requirements {
 	@include class;
-	background: radial-gradient($accent4-color, $accent2-color);
+	background-image: radial-gradient($accent4-color, $accent2-color);
 
 	p {
 		@include paragraph;

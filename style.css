@@ -90,6 +90,7 @@ header {
 header h1 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   text-decoration: none;
   font-family: "Lora", serif;
   font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
@@ -105,6 +106,7 @@ header h1 {
 header h2 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   text-decoration: none;
   font-family: "Lora", serif;
   font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
@@ -120,6 +122,7 @@ header h2 {
 header h3 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   text-decoration: none;
   font-family: "Lora", serif;
   font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
@@ -156,7 +159,7 @@ header h3 {
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
-  background-color: #ff7f27;
+  background-image: radial-gradient(#ff7f27, #48925D);
 }
 .preamble p {
   font-family: Arial, Helvetica, sans-serif;
@@ -171,7 +174,7 @@ header h3 {
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
-  background-color: #48925D;
+  background-image: radial-gradient(#48925D, #ff7f27);
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   color: #000000;
@@ -184,7 +187,7 @@ header h3 {
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
-  background-color: #3f48cc;
+  background-image: radial-gradient(#3f48cc, #48925D);
 }
 .participation p {
   font-family: Arial, Helvetica, sans-serif;
@@ -199,7 +202,7 @@ header h3 {
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
-  background-color: #ff7f27;
+  background-image: radial-gradient(#3f48cc, #ff7f27);
 }
 .benefits p {
   font-family: Arial, Helvetica, sans-serif;
@@ -214,7 +217,7 @@ header h3 {
   width: 1200px;
   margin: 20px 20px 20px 10px;
   padding: 0 2rem;
-  background-color: #48925D;
+  background-image: radial-gradient(#ff7f27, #3f48cc);
 }
 .requirements p {
   font-family: Arial, Helvetica, sans-serif;
